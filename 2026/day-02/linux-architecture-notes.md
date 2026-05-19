@@ -21,9 +21,9 @@ Security high plus mutiuser system
 Ask--Application->Shell->Kernel
 
 Kernel is a heart of system
-its written in C program(written by Lenus tirvald)
+its written in C program(written by Lenus torvald)
 
-Shell is interphase GUI based , when you type command shell tell to kernal,it will read and compile program 0 or 1.
+Shell is interphase GUI based , when you type command, shell tell to kernal,it will read and compile program 0 or 1.
 
 # How Internal Process Works in Linux?
 
