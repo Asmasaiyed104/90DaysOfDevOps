@@ -1,16 +1,21 @@
-name: Manual Trigger
+name: Matrix Build
 
-on:
-  workflow_dispatch:
-    inputs:
-      environment:
-        description: 'Environment to deploy to'
-        required: true
-        default: 'staging'
+on: push
 
 jobs:
-  print-env:
-    runs-on: ubuntu-latest
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11", "3.12"]
+        os: [ubuntu-latest, windows-latest]
+        exclude:
+          - os: windows-latest
+            python-version: "3.10"
     steps:
-      - name: Print input
-        run: echo "Deploying to environment: ${{ github.event.inputs.environment }}"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Print version
+        run: python --version
