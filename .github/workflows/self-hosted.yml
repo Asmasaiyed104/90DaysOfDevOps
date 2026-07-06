@@ -4,7 +4,7 @@ on: push
 
 jobs:
   run-on-my-machine:
-    runs-on: self-hosted
+    runs-on: [self-hosted, my-linux-runner]
     steps:
       - name: Print hostname
         run: echo "Hostname is $(hostname)"
