@@ -14,3 +14,4 @@ jobs:
     steps:
       - name: Print input
         run: echo "Deploying to environment: ${{ github.event.inputs.environment }}"
+        
