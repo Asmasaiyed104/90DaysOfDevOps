@@ -6,7 +6,12 @@ jobs:
   run-on-my-machine:
     runs-on: self-hosted
     steps:
-  
+      - name: Print hostname
+        run: echo "Hostname is $(hostname)"
+
+      - name: Print working directory
+        run: echo "Working directory is $(pwd)"
+
       - name: Create a test file
         run: echo "Hello from GitHub Actions" > day42-test.txt
 
