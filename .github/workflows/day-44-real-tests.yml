@@ -3,7 +3,8 @@ name: Day 44 - Real Tests
 on:
   push:
     branches:
-      - main
+      - DevOps-practice
+
   workflow_dispatch:
 
 jobs:

@@ -1,6 +1,10 @@
 name: Day 44 - Artifact Between Jobs
 
 on:
+  push:
+    branches:
+      - DevOps-practice
+
   workflow_dispatch:
 
 jobs:

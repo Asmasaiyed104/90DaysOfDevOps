@@ -1,6 +1,10 @@
 name: Day 44 - Upload Artifacts
 
 on:
+  push:
+    branches:
+      - DevOps-practice
+
   workflow_dispatch:
 
 jobs:
